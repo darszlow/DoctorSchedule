@@ -38,7 +38,7 @@ namespace DocplannerTest.Handlers
 
             if (currentDay.DayOfWeek != DayOfWeek.Monday)
             {
-                throw new Exception("Request date is not Monady");
+                throw new ArgumentException("Request date is not Monady");
             }
 
             slotDTO = await SlotService.GetWeekly(mondayDate);
